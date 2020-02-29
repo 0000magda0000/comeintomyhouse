@@ -1,0 +1,235 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  background-image: linear-gradient(to right, #99bfcf ,#664030);
+;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1vw;
+  background-image: linear-gradient(to right, #99bfcf ,#664030);
+
+}
+
+.frame-1 {
+  color: #99bfcf;
+  font-style: italic;
+  font-family: fantasy;
+  padding: 3vw;
+  animation-name: size;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+.frame-2 {
+  color: #99bfcf;
+  font-style: italic;
+  font-family: fantasy;
+  padding: 3vw;
+  animation-name: size, rotation;
+  animation-duration: 4s, 4s;
+  animation-fill-mode: forwards;
+}
+
+.frame-3 {
+  color: #99bfcf;
+  font-style: italic;
+  font-family: fantasy;
+  padding: 3vw;
+  animation-name: size;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+.frame-4 {
+  color: #99bfcf;
+  font-style: italic;
+  font-family: fantasy;
+  padding: 3vw;
+  animation-name: size, blinking, glow;
+  animation-duration: 4s, .1s, 1s;
+  animation-iteration-count: 1, infinite, infinite;
+  animation-delay: 0s, 4s, 4s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #99bfcf, 0 0 40px #99bfcf, 0 0 50px #99bfcf, 0 0 60px #99bfcf, 0 0 70px #99bfcf;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #99bfcf, 0 0 40px #99bfcf, 0 0 50px #99bfcf, 0 0 60px #99bfcf, 0 0 70px #99bfcf, 0 0 80px #99bfcf;
+  }
+}
+
+@keyframes size {
+  0% {font-size: 0vw;}
+  100% {font-size: 7vw;}
+
+}
+
+@keyframes rotation {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(-90deg);}
+
+}
+
+
+@keyframes  blinking {
+  0%{     color: #fff;    }
+  49%{    color: #fff; }
+  60%{    color: transparent; }
+  99%{    color: transparent;  }
+  100%{   color: #fff;    }
+
+
+}
+
+
+
+.path {
+  fill: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+}
+
+.path-1 {
+  stroke: #99bfcf;
+  stroke-width: .05vw;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 20s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* house */
+
+
+.grid-container-house {
+  display: grid;
+  grid-template-areas:
+    'into into into into into into'
+    'come my my my my item'
+    'come house house house house house';
+  grid-gap: 1vw;
+  background-image: linear-gradient(to right, #99bfcf ,#664030);
+  padding: 1vw;
+  justify-content: center;
+
+}
+
+
+.grid-container-house > div {
+  background-color: #664030;
+  text-align: center;
+  padding: 1vw;
+  font-style: italic;
+  word-wrap: break-word;
+  word-break: break-all;
+
+}
+
+
+.to {
+  grid-area: into;
+  font-size: 3vw;
+  color: #99bfcf;
+  text-align: center;
+
+
+}
+.welcome {
+  grid-area: come;
+  font-size: 7vw;
+  color: #99bfcf;
+}
+
+.my-queendom {
+  grid-area: my;
+font-size: 5vw;
+color: #99bfcf;
+
+}
+.monkey-video {
+  grid-area: house;
+
+}
+.queendom {
+  grid-area: item;
+  font-size: 10vw;
+  color: #99bfcf;
+  text-decoration: none;
+  animation-name: color-change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes color-change {
+  0% {color: #99bfcf}
+  50% {color: #664030}
+  100% {color: #99bfcf}
+
+}
+
+
+/* queendom */
+
+.portrait {
+  height: 52.083333333333336vw;
+  width: 34.44444444444444vw;
+  float: right;
+}
+
+
+.monkey-text {
+  height: 100%;
+  width: 50%;
+  float: left;
+  font-family: fantasy;
+  font-size: 4vw;
+  color: #99bfcf;
+  padding: 4vw;
+
+
+}
+
+.asgood:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
