@@ -15,7 +15,7 @@
  */
 body {
   background-image: linear-gradient(to right, #99bfcf ,#664030);
-;
+
 }
 
 .container {
@@ -200,11 +200,10 @@ color: #99bfcf;
 /* queendom */
 
 .portrait {
-  height: 52.083333333333336vw;
-  width: 34.44444444444444vw;
+  height: 20vw;
+  width: auto;
   float: right;
 }
-
 
 .monkey-text {
   height: 100%;
