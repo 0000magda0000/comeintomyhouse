@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ /*index*/
 body {
   background-image: linear-gradient(to right, #99bfcf ,#664030);
 
@@ -130,12 +132,12 @@ body {
 /* house */
 
 
-.grid-container-house {
+.grid-container-queendom {
   display: grid;
   grid-template-areas:
-    'into into into into into into'
-    'come my my my my item'
-    'come house house house house house';
+    'welcome to to to to to'
+    'welcome my-queendom my-queendom my-queendom my-queendom queendom'
+    'welcome iframe iframe iframe iframe iframe';
   grid-gap: 1vw;
   background-image: linear-gradient(to right, #99bfcf ,#664030);
   padding: 1vw;
@@ -144,10 +146,10 @@ body {
 }
 
 
-.grid-container-house > div {
+.grid-container-queendom > div {
   background-color: #664030;
   text-align: center;
-  padding: 1vw;
+  justify-content: center;
   font-style: italic;
   word-wrap: break-word;
   word-break: break-all;
@@ -156,37 +158,43 @@ body {
 
 
 .to {
-  grid-area: into;
+  grid-area: to;
   font-size: 3vw;
   color: #99bfcf;
   text-align: center;
+  padding: 1vw;
+
 
 
 }
 .welcome {
-  grid-area: come;
+  grid-area: welcome;
   font-size: 7vw;
   color: #99bfcf;
+  padding: 1vw;
+
 }
 
 .my-queendom {
-  grid-area: my;
-font-size: 5vw;
+grid-area: my-queendom;
+font-size: 12vw;
 color: #99bfcf;
+
 
 }
 .monkey-video {
-  grid-area: house;
+grid-area: iframe;
 
 }
 .queendom {
-  grid-area: item;
+  grid-area: queendom;
   font-size: 10vw;
   color: #99bfcf;
   text-decoration: none;
   animation-name: color-change;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+
 
 }
 @keyframes color-change {
@@ -217,7 +225,9 @@ color: #99bfcf;
 
 }
 
-.asgood:hover {
+.asgood {
+  color: #99bfcf;
+  text-decoration: none;
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
   -webkit-mask-size: 200%;
   animation: shine 2s infinite;
@@ -232,3 +242,76 @@ color: #99bfcf;
     -webkit-mask-position: -50%;
   }
 }
+
+/* asgoodaspossible */
+
+
+.box-good {
+  position: absolute;
+  top:10vw;
+  left: 10vw;
+  width: w0vw;
+  height: 40vw;
+}
+
+.square-good {
+  position: absolute;
+  top:0vw;
+  left:0vw;
+  width: 40vw;
+  height: 40vw;
+  background-image: linear-gradient(to right, #99bfcf ,#664030);
+}
+
+.square-good-1 {
+  position: absolute;
+  top:0vw;
+  left: 20vw;
+  width: 20vw;
+  height: 20vw;
+  background-image: linear-gradient(to right, #99bfcf ,#664030);
+  }
+
+
+.square-good-1 .img-kapellmeister {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 20vw;
+  z-index: 99;
+    }
+
+.square-good-1:hover .img-kapellmeister {
+  display: inline;
+    }
+
+
+
+
+
+  .square-good-2 {
+    position: absolute;
+    top: 20vw;
+    left: 0vw;
+    width: 20vw;
+    height: 20vw;
+    background-image: linear-gradient(to right, #99bfcf ,#664030);
+    }
+
+    .square-good-4 {
+      position: absolute;
+      top:5vw;
+      left: 0vw;
+      width: 10vw;
+      height: 30vw;
+      background: #99bfcf;
+      }
+
+      .square-good-5 {
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        width: 20vw;
+        height: 10vw;
+        background: #664030;
+        }
