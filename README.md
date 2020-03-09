@@ -1,6 +1,6 @@
 # comeintomyhouse
-playing with css (.svg path drawing, grids, etc.)
-
+getting used to the rails framework <br>
+and playing with css (.svg paths, grids)
 ![image of first site of the website](app/assets/images/comeintomyhouse.png)
 
 
